@@ -1,84 +1,71 @@
-YOLOv8 Object Detection API with FastAPI and Docker
+YOLOv8 Object Detection API using FastAPI and Docker
 
-This repository provides an API for object detection using a custom-trained YOLOv8 model. The application is built with FastAPI and containerized using Docker, allowing for deployment and integration into various projects.
+This project demonstrates an object detection API built using a custom-trained YOLOv8 model. 
+The model is served via FastAPI and containerized with Docker. It enables real-time predictions on uploaded images and is suitable for deployment or integration into larger production systems.
 
-Project Overview
+Project Highlights
 
-This project implements a RESTful API that accepts image uploads and returns object detection results using a YOLOv8 model trained to detect bikes and related objects.
+•	- YOLOv8-based object detection (e.g., bike/person)
+•	- FastAPI for serving predictions over HTTP
+•	- Docker support for easy deployment
+•	- Swagger UI for testing the API via browser
 
-Features
+Project Structure
+.
+├── app/
+│   ├── detector.py        # Handles model loading and inference logic
+│   ├── infer_api.py       # FastAPI route to handle image upload & prediction
+│   ├── test.jpg           # Sample input image
+│   └── yolov8s.pt         # Trained YOLOv8 model weights
+├── Dockerfile             # Docker instructions to containerize the app
+├── main.py                # App entry point for uvicorn
+├── requirements.txt       # Python dependencies
+└── README.md              # Project documentation (this file)
 
-- Inference endpoint built with FastAPI
-- Support for image uploads and predictions via POST requests
-- Uses a custom-trained YOLOv8 model
-- Dockerized for consistent cross-platform deployment
-- Swagger UI documentation available for testing
 
 Setup Instructions
+1.	 Clone the Repository
 
-Clone the Repository
+git clone https://github.com/Ajinkya-001/BIKE-DETECTOR-USING-YOLO-AND-FAST-API.git
+cd BIKE-DETECTOR-USING-YOLO-AND-FAST-API
 
-git clone https://github.com/<your-username>/yolo-fastapi.git  
-cd yolo-fastapi
+2.	Run Locally (Conda)
 
-Build the Docker Image
+conda create -n yolo-env python=3.10 -y
+conda activate yolo-env
+pip install -r requirements.txt
+python main.py
+
+Access the API at: http://localhost:8000/docs
+
+3.	Run with Docker
 
 docker build -t yolo-fastapi-app .
-
-Run the Docker Container
-
 docker run -it --rm -p 8000:8000 yolo-fastapi-app
-
-Access the API at:  
-http://localhost:8000
-
-Interactive API documentation available at:  
-http://localhost:8000/docs
 
 API Usage
 
-Endpoint: POST /predict/  
-Description: Accepts an image file and returns detected objects with bounding boxes and confidence scores.
+- Navigate to: http://localhost:8000/docs
+- Use the /predict/ endpoint
+- Upload an image and receive the output with bounding boxes
 
-Request
+Use Cases
+•	- Real-time helmet or bike detection in surveillance systems
+•	- Traffic violation detection in smart cities
+•	- Safety compliance systems in industrial zones
+•	- Object detection model deployment templates for computer vision projects
 
-- Method: POST  
-- Content-Type: multipart/form-data  
-- Field: file (image file)
+Model Information
+•	- Architecture: YOLOv8s
+•	- Framework: PyTorch
+•	- Format: .pt weights
+•	- Classes: Bike, Person, Truck (customizable)
 
-Directory Structure
-
-yolo-fastapi/  
-├── app/  
-│   ├── infer_api.py            FastAPI application logic  
-│   ├── utils.py                Utility functions  
-│   └── yolov8_model/  
-│       └── best.pt             Trained YOLOv8 model weights  
-├── Dockerfile                  Docker image build file  
-├── requirements.txt            Python dependencies  
-├── requirements-cuda.txt       Optional: GPU dependencies  
-├── .gitignore  
-└── README.md
-
-Requirements:
-
-To install dependencies locally:
-
-pip install -r requirements.txt
-
-For GPU support:
-
-pip install -r requirements-cuda.txt
-
-Model Details
-
-- Model: YOLOv8s  
-- Format: PyTorch (.pt)  
-- Detection Classes: Bike, Person, Truck (modifiable)
-
-Author
-
-Ajinkya Patil  
-B.Tech in Artificial Intelligence and Robotics  
-Dayananda Sagar University  
+Author Info
+Ajinkya Patil
+Pursuing BTech in Artificial Intelligence and Robotics
+Dayananda Sagar University (Batch of 2027)
 GitHub: https://github.com/Ajinkya-001
+
+License
+This project is licensed under the MIT License. Feel free to use, modify, and distribute.
