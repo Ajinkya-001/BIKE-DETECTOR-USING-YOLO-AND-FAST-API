@@ -10,16 +10,18 @@ This project demonstrates an object detection API built using a custom-trained Y
 - Swagger UI for testing the API via browser
 
 
+
 BIKE-DETECTOR-USING-YOLO-AND-FAST-API/
 ├── app/
 │   ├── detector.py        # YOLOv8 model loading and inference logic
-│   ├── infer_api.py       # FastAPI route handling image uploads and predictions
-│   ├── test.jpg           # Sample image for testing
+│   ├── infer_api.py       # FastAPI route for image upload & prediction
+│   ├── test.jpg           # Sample image input
 │   └── yolov8s.pt         # Trained YOLOv8 model weights
 ├── Dockerfile             # Dockerfile to containerize the FastAPI app
-├── main.py                # Entry point to run the FastAPI server
-├── requirements.txt       # List of Python dependencies
+├── main.py                # Entry point to run the API with Uvicorn
+├── requirements.txt       # Required Python dependencies
 └── README.md              # Project documentation
+
 
 
 
