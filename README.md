@@ -44,18 +44,22 @@ docker build -t yolo-fastapi-app .
 docker run -it --rm -p 8000:8000 yolo-fastapi-app
 ```
 
-API Usage
+## API Usage
 
-Navigate to: http://localhost:8000/docs
-Use the /predict/ endpoint
-Upload an image and receive the output with detection bounding boxes
+- Navigate to: [http://localhost:8000/docs](http://localhost:8000/docs)  
+- Use the `/predict/` endpoint  
+- Upload an image  
+- Receive output image with detection bounding boxes
 
-Use Cases
+---
 
-Real-time helmet or bike detection in surveillance systems
-Traffic violation detection in smart cities
-Safety compliance systems in industrial zones
-Object detection deployment boilerplate for CV projects
+## Use Cases
+
+- Real-time helmet or bike detection in surveillance systems  
+- Traffic violation detection in smart cities  
+- Safety compliance systems in industrial zones  
+- Object detection deployment boilerplate for CV projects
+
 
 
 ## Model Information
