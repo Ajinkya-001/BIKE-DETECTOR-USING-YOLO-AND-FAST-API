@@ -58,18 +58,25 @@ Safety compliance systems in industrial zones
 Object detection deployment boilerplate for CV projects
 
 
-Model Information
-Architecture: YOLOv8s
-Framework: PyTorch
-Format: .pt weights
-Classes: Bike, Person, Truck (customizable)
+## Model Information
 
-Author
-Ajinkya Patil
-BTech in Artificial Intelligence and Robotics
-Dayananda Sagar University, Batch of 2027
-GitHub: Ajinkya-001
+**Architecture:** YOLOv8s  
+**Framework:** PyTorch  
+**Format:** `.pt` weights  
+**Classes:** Bike, Person, Truck (customizable)
 
-License
-This project is licensed under the MIT License.
-You are free to use, modify, and distribute it for commercial or personal purposes.
+---
+
+## Author
+
+**Ajinkya Patil**  
+BTech in Artificial Intelligence and Robotics  
+Dayananda Sagar University, Batch of 2027  
+GitHub: [Ajinkya-001](https://github.com/Ajinkya-001)
+
+---
+
+## License
+
+This project is licensed under the MIT License.  
+You are free to **use**, **modify**, and **distribute** it for commercial or personal purposes.
