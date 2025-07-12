@@ -10,18 +10,7 @@ This project demonstrates an object detection API built using a custom-trained Y
 - Swagger UI for testing the API via browser
 
 
-##Project Structure
-
-.
-├── app/
-│ ├── detector.py # Handles model loading and inference
-│ ├── infer_api.py # FastAPI endpoint for image upload and detection
-│ ├── test.jpg # Sample input image
-│ └── yolov8s.pt # Trained YOLOv8 model weights
-├── Dockerfile # Docker build config
-├── main.py # App entry point for uvicorn
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
+<pre lang="text"><code> Project Structure . ├── app/ │ ├── detector.py --> Handles model loading and inference logic │ ├── infer_api.py --> FastAPI route to handle image upload & prediction │ ├── test.jpg --> Sample input image │ └── yolov8s.pt --> Trained YOLOv8 model weights ├── Dockerfile --> Docker instructions to containerize the app ├── main.py --> App entry point for uvicorn ├── requirements.txt --> Python dependencies └── README.md --> Project documentation </code></pre>
 
 
 ## Setup Instructions
