@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  bike-detector-api:
+    build:
+      context: .
+    container_name: bike_detector_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
